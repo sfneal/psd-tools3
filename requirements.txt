@@ -29,7 +29,7 @@ Pygments==2.9.0
 pyparsing==2.4.7
 pytest==6.2.4
 PyWavelets==1.1.1
-scipy==1.6.3
+scipy>=1.5.0,<=1.6.3
 six==1.16.0
 toml==0.10.2
 traitlets==5.0.5
