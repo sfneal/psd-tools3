@@ -25,7 +25,14 @@ setup_args = dict(
     license='MIT License',
     requires=['docopt (>= 0.5)', 'Pillow'],
     install_requires=[
-        'docopt >= 0.5', 'packbits', 'attrs', 'Pillow', 'enum34;python_version<"3.4"', 'exifread', 'PyBundle'
+        'docopt >= 0.5',
+        'packbits',
+        'attrs',
+        'Pillow',
+        'enum34;python_version<"3.4"',
+        'exifread',
+        'PyBundle',
+        'IPython',
     ],
     keywords="pymaging psd imaging pil pillow",
     zip_safe=False,
