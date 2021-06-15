@@ -20,9 +20,7 @@ setup(
     author_email='stephen@stephenneal.net',
     url='https://github.com/sfneal/psd-tools3',
     description='Fork of psd-tools for working with Photoshop PSD files',
-    long_description=(
-            open('README.rst').read() + "\n\n" + open('CHANGES.rst').read()
-    ),
+    long_description=(open('README.rst').read() + "\n\n" + open('CHANGES.rst').read()),
     license='MIT License',
     install_requires=[
         'docopt >= 0.5',
@@ -34,9 +32,7 @@ setup(
     keywords="photoshop psd pil pillow",
     package_dir={'': 'src'},
     packages=find_packages('src'),
-    entry_points={
-        'console_scripts': ['psd-tools=psd_tools.__main__:main']
-    },
+    entry_points={'console_scripts': ['psd-tools=psd_tools.__main__:main']},
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
