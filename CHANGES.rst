@@ -2,6 +2,8 @@
 ------------------
 - upgrade Py dependency
 - merge changes from kyamagu/psd-tools
+- add Scrutinizer & Style CI support
+- optimize dependencies
 
 
 1.8.8 (2019-02-20)
