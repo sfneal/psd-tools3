@@ -1,4 +1,4 @@
-1.9.0 (2021-06-15)
+1.9.0 (2021-06-16)
 ------------------
 - upgrade Py dependency
 - merge changes from kyamagu/psd-tools
