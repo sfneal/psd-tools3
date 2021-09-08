@@ -1,3 +1,9 @@
+Version 1.9.1, 2021-09-08
+--------------------------
+- add pip install timeout to prevent Travis CI jobs from hanging
+- bump pillow from 8.2.0 to 8.3.2 (dependabot security vulnerability)
+
+
 1.9.0 (2021-06-16)
 ------------------
 - upgrade Py dependency
