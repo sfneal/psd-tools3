@@ -31,6 +31,7 @@ class Path(ListElement):
     List-like Path structure. Elements are either PathFillRule,
     InitialFillRule, ClipboardRecord, ClosedPath, or OpenPath.
     """
+
     @classmethod
     def read(cls, fp):
         items = []
@@ -121,12 +122,14 @@ class Knot(BaseElement):
 
 @register(PathResourceID.CLOSED_LENGTH)
 class ClosedPath(Subpath):
+
     def is_closed(self):
         return True
 
 
 @register(PathResourceID.OPEN_LENGTH)
 class OpenPath(Subpath):
+
     def is_closed(self):
         return False
 
@@ -157,6 +160,7 @@ class PathFillRule(BaseElement):
     """
     Path fill rule record, empty.
     """
+
     @classmethod
     def read(cls, fp):
         read_fmt('24x', fp)

@@ -394,6 +394,7 @@ class ChannelBlendingRestrictionsSetting(ListElement):
 
     List of restricted channel numbers (int).
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -434,6 +435,7 @@ class MetadataSettings(ListElement):
     """
     MetadataSettings structure.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         count = read_fmt('I', fp)[0]
@@ -496,6 +498,7 @@ class PixelSourceData2(ListElement):
     """
     PixelSourceData2 structure.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -552,6 +555,7 @@ class ProtectedSetting(IntegerElement):
     """
     ProtectedSetting structure.
     """
+
     @property
     def transparency(self):
         return bool(self.value & 0x01)
@@ -571,6 +575,7 @@ class ReferencePoint(ListElement):
     """
     ReferencePoint structure.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(list(read_fmt('2d', fp)))

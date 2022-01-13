@@ -124,6 +124,7 @@ class Dict(DictElement):
     """
     Dict-like element.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls.frombytes(fp.read())
@@ -228,6 +229,7 @@ class EngineData2(Dict):
 
     TEXT_ENGINE_DATA tagged block has this object.
     """
+
     def write(self, fp, indent=None, write_container=False, **kwargs):
         return super(EngineData2, self).write(fp, indent=indent, write_container=write_container)
 
@@ -237,6 +239,7 @@ class List(ListElement):
     """
     List-like element.
     """
+
     @classmethod
     def read(cls, fp):
         return cls.frombytes(fp.read())
@@ -317,6 +320,7 @@ class Bool(BooleanElement):
     """
     Bool element.
     """
+
     @classmethod
     def read(cls, fp):
         return cls.frombytes(fp.read())
@@ -334,6 +338,7 @@ class Integer(IntegerElement):
     """
     Integer element.
     """
+
     @classmethod
     def read(cls, fp):
         return cls.frombytes(fp.read())
@@ -351,6 +356,7 @@ class Float(NumericElement):
     """
     Float element.
     """
+
     @classmethod
     def read(cls, fp):
         return cls.frombytes(fp.read())
@@ -374,6 +380,7 @@ class Property(ValueElement):
     """
     Property element.
     """
+
     @classmethod
     def read(cls, fp):
         return cls.frombytes(fp.read())
@@ -391,6 +398,7 @@ class Tag(ValueElement):
     """
     Tag element.
     """
+
     @classmethod
     def read(cls, fp):
         return cls(fp.read())

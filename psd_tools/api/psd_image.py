@@ -30,6 +30,7 @@ class PSDImage(GroupMixin):
             if layer.has_pixels():
                 layer_image = layer.topil()
     """
+
     def __init__(self, data):
         assert isinstance(data, PSD)
         self._record = None

@@ -101,6 +101,7 @@ class ColorLookup(DescriptorBlock2):
     .. py:attribute:: version
     .. py:attribute:: data_version
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         version, data_version = read_fmt('HI', fp)

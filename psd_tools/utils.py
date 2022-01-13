@@ -289,6 +289,7 @@ def new_registry(attribute=None):
     registry = {}
 
     def register(key):
+
         def decorator(func):
             registry[key] = func
             if attribute:

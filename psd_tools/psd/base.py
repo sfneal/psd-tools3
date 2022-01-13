@@ -16,6 +16,7 @@ class BaseElement(object):
     """
     Base element of various PSD file structs.
     """
+
     @classmethod
     def read(cls, fp):
         """Read the element from a file-like object.
@@ -108,6 +109,7 @@ class EmptyElement(BaseElement):
     """
     Empty element that does not have a value.
     """
+
     @classmethod
     def read(cls, fp, *args, **kwargs):
         return cls()
@@ -323,6 +325,7 @@ class ShortIntegerElement(IntegerElement):
 
     Use with `@attr.s(repr=False)` decorator.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(read_fmt('H2x', fp)[0])
@@ -338,6 +341,7 @@ class ByteElement(IntegerElement):
 
     Use with `@attr.s(repr=False)` decorator.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(read_fmt('B3x', fp)[0])
