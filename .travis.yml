@@ -38,4 +38,4 @@ deploy:
   skip_existing: true
   on:
     tags: true
-    python: 3.10
+    python: 3.9
