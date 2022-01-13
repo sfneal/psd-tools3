@@ -78,6 +78,7 @@ class LayerAndMaskInformation(BaseElement):
         :param encoding: encoding of the string
         :param version: psd file version
         """
+
         def writer(f):
             written = self._write_body(f, encoding, version, padding)
             logger.debug('writing layer and mask info, len=%d' % (written))
@@ -153,6 +154,7 @@ class LayerInfo(BaseElement):
         :param fp: file-like object
         :rtype: int
         """
+
         def writer(f):
             written = self._write_body(f, encoding, version, padding)
             logger.debug('writing layer info, len=%d' % (written))
@@ -190,6 +192,7 @@ class LayerInfo(BaseElement):
 class LayerInfoBlock(LayerInfo):
     """
     """
+
     @classmethod
     def read(cls, fp, encoding='macroman', version=1, **kwargs):
         return cls._read_body(fp, encoding, version)
@@ -324,6 +327,7 @@ class LayerBlendingRanges(BaseElement):
 
     @classmethod
     def _read_body(cls, fp):
+
         def read_channel_range(f):
             values = read_fmt("4H", f)
             return [values[0:2], values[2:4]]
@@ -357,6 +361,7 @@ class LayerRecords(ListElement):
     """
     List of layer records. See :py:class:`.LayerRecord`.
     """
+
     @classmethod
     def read(cls, fp, layer_count, encoding='macroman', version=1):
         """Read the element from a file-like object.
@@ -813,6 +818,7 @@ class ChannelImageData(ListElement):
 
     See :py:class:`.ChannelDataList`.
     """
+
     @classmethod
     def read(cls, fp, layer_records=None):
         """Read the element from a file-like object.
@@ -850,6 +856,7 @@ class ChannelDataList(ListElement):
 
     See :py:class:`.ChannelData`.
     """
+
     @classmethod
     def read(cls, fp, channel_info):
         """Read the element from a file-like object.

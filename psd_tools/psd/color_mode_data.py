@@ -42,6 +42,7 @@ class ColorModeData(ValueElement):
 
         :param fp: file-like object
         """
+
         def writer(f):
             return write_bytes(f, self.value)
 

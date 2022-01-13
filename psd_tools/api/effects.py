@@ -18,6 +18,7 @@ class Effects(object):
     """
     List-like effects.
     """
+
     def __init__(self, layer):
         self._data = None
         for tag in (
@@ -82,6 +83,7 @@ class Effects(object):
 
 class _Effect(object):
     """Base Effect class."""
+
     def __init__(self, value, image_resources):
         self.value = value
         self._image_resources = image_resources
@@ -116,6 +118,7 @@ class _Effect(object):
 
 
 class _ColorMixin(object):
+
     @property
     def color(self):
         """Color."""
@@ -129,6 +132,7 @@ class _ColorMixin(object):
 
 
 class _ChokeNoiseMixin(_ColorMixin):
+
     @property
     def choke(self):
         """Choke level."""
@@ -156,6 +160,7 @@ class _ChokeNoiseMixin(_ColorMixin):
 
 
 class _AngleMixin(object):
+
     @property
     def use_global_light(self):
         """Using global light."""
@@ -170,6 +175,7 @@ class _AngleMixin(object):
 
 
 class _GradientMixin(object):
+
     @property
     def gradient(self):
         """Gradient configuration."""
@@ -177,6 +183,7 @@ class _GradientMixin(object):
 
 
 class _PatternMixin(object):
+
     @property
     def pattern(self):
         """Pattern config."""
@@ -186,6 +193,7 @@ class _PatternMixin(object):
 
 class _ShadowEffect(_Effect, _ChokeNoiseMixin, _AngleMixin):
     """Base class for shadow effect."""
+
     @property
     def distance(self):
         """Distance."""
@@ -194,6 +202,7 @@ class _ShadowEffect(_Effect, _ChokeNoiseMixin, _AngleMixin):
 
 class _GlowEffect(_Effect, _ChokeNoiseMixin, _GradientMixin):
     """Base class for glow effect."""
+
     @property
     def glow_type(self):
         """Glow type. 'softer' or 'precise'."""
@@ -217,6 +226,7 @@ class _OverlayEffect(_Effect):
 
 
 class _AlignScaleMixin(object):
+
     @property
     def blend_mode(self):
         """Effect blending mode."""
@@ -236,6 +246,7 @@ class _AlignScaleMixin(object):
 
 @register(DescriptorClassID.DROP_SHADOW)
 class DropShadow(_ShadowEffect):
+
     @property
     def layer_knocks_out(self):
         """Layers are knocking out."""
@@ -249,6 +260,7 @@ class InnerShadow(_ShadowEffect):
 
 @register(DescriptorClassID.OUTER_GLOW)
 class OuterGlow(_GlowEffect):
+
     @property
     def spread(self):
         return self.value.get(DescriptorClassID.QUALITY_JITTER).value
@@ -256,6 +268,7 @@ class OuterGlow(_GlowEffect):
 
 @register(DescriptorClassID.INNER_GLOW)
 class InnerGlow(_GlowEffect):
+
     @property
     def glow_source(self):
         """Elements source, 'edge' or 'center'."""
@@ -271,6 +284,7 @@ class ColorOverlay(_OverlayEffect, _ColorMixin):
 
 @register(DescriptorClassID.GRADIENT_OVERLAY)
 class GradientOverlay(_OverlayEffect, _AlignScaleMixin, _GradientMixin):
+
     @property
     def angle(self):
         """Angle value."""
@@ -303,6 +317,7 @@ class GradientOverlay(_OverlayEffect, _AlignScaleMixin, _GradientMixin):
 
 @register(b'patternFill')
 class PatternOverlay(_OverlayEffect, _AlignScaleMixin, _PatternMixin):
+
     @property
     def phase(self):
         """Phase value in Point."""
@@ -311,6 +326,7 @@ class PatternOverlay(_OverlayEffect, _AlignScaleMixin, _PatternMixin):
 
 @register(DescriptorClassID.STROKE)
 class Stroke(_Effect, _ColorMixin, _PatternMixin, _GradientMixin):
+
     @property
     def position(self):
         """Position of the stroke, `inner`, `outer`, or `center`."""
@@ -335,6 +351,7 @@ class Stroke(_Effect, _ColorMixin, _PatternMixin, _GradientMixin):
 
 @register(DescriptorClassID.BEVEL_EMBOSS)
 class BevelEmboss(_Effect, _AngleMixin):
+
     @property
     def highlight_mode(self):
         """Highlight blending mode."""
@@ -433,6 +450,7 @@ class BevelEmboss(_Effect, _AngleMixin):
 @register(DescriptorClassID.SATIN)
 class Satin(_Effect, _ColorMixin):
     """ Satin effect """
+
     @property
     def anti_aliased(self):
         """Anti-aliased."""

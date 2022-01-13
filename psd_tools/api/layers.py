@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 class Layer(object):
+
     def __init__(self, psd, record, channels, parent):
         self._psd = psd
         self._record = record
@@ -420,6 +421,7 @@ class Layer(object):
 
 
 class GroupMixin(object):
+
     @property
     def left(self):
         return self.bbox[0]
@@ -504,6 +506,7 @@ class Group(GroupMixin, Layer):
             if layer.kind == 'pixel':
                 print(layer.name)
     """
+
     def __init__(self, *args):
         super(Group, self).__init__(*args)
         self._layers = []
@@ -539,6 +542,7 @@ class SmartObjectLayer(Layer):
         if layer.smart_object.filetype == 'jpg':
             image = Image.open(io.BytesIO(layer.smart_object.data))
     """
+
     @property
     def smart_object(self):
         """
@@ -592,6 +596,7 @@ class TypeLayer(Layer):
                 print('%r gets %s' % (substring, font))
                 index += length
     """
+
     def __init__(self, *args):
         super(TypeLayer, self).__init__(*args)
         self._data = self.tagged_blocks.get_data('TYPE_TOOL_OBJECT_SETTING')
@@ -679,6 +684,7 @@ class ShapeLayer(Layer):
     """
     Layer that has drawing in vector mask.
     """
+
     @property
     def left(self):
         return self.bbox[0]
@@ -753,6 +759,7 @@ class ShapeLayer(Layer):
 
 class AdjustmentLayer(Layer):
     """Layer that applies specified image adjustment effect."""
+
     def __init__(self, *args):
         super(AdjustmentLayer, self).__init__(*args)
         self._data = None
@@ -770,6 +777,7 @@ class AdjustmentLayer(Layer):
 
 class FillLayer(Layer):
     """Layer that fills the canvas region."""
+
     def __init__(self, *args):
         super(FillLayer, self).__init__(*args)
         self._data = None
