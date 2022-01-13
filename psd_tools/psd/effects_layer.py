@@ -93,6 +93,7 @@ class ShadowInfo(BaseElement):
 
 
 class _GlowInfo(object):
+
     @classmethod
     def _read_body(cls, fp):
         # TODO: Check 4-byte = 2-byte int + 2-byte fraction?

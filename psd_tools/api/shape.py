@@ -20,6 +20,7 @@ class VectorMask(object):
     Bezier curves. Check :py:attr:`~psd_tools.api.shape.VectorMask.paths`
     property for how to deal with path objects.
     """
+
     def __init__(self, data):
         self._data = data
         self._build()
@@ -254,6 +255,7 @@ class Origination(object):
     Vector origination keeps live shape properties for some of the primitive
     shapes.
     """
+
     @classmethod
     def create(kls, data):
         if data.get(b'keyShapeInvalidated'):
@@ -333,6 +335,7 @@ class Invalidated(Origination):
     properties. Use :py:class:`~psd_tools.api.shape.VectorMask` to access
     shape information instead of this origination object.
     """
+
     @property
     def invalidated(self):
         return True
@@ -353,6 +356,7 @@ class Ellipse(Origination):
 
 class RoundedRectangle(Origination):
     """Rounded rectangle live shape."""
+
     @property
     def radii(self):
         """
@@ -366,6 +370,7 @@ class RoundedRectangle(Origination):
 
 class Line(Origination):
     """Line live shape."""
+
     @property
     def line_end(self):
         """

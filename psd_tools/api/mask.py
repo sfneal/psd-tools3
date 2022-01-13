@@ -18,6 +18,7 @@ class Mask(object):
     from a shape path. Internally, two masks are combined and referred
     real mask.
     """
+
     def __init__(self, layer):
         self._layer = layer
         self._data = layer._record.mask_data

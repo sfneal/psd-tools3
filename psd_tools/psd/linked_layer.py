@@ -23,6 +23,7 @@ class LinkedLayers(ListElement):
     """
     List of LinkedLayer structure. See :py:class:`.LinkedLayer`.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []

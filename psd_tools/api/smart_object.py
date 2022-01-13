@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 
 class SmartObject(object):
     """Smart object that represents embedded or external file."""
+
     def __init__(self, layer):
         self._config = None
         for key in ('SMART_OBJECT_LAYER_DATA1', 'SMART_OBJECT_LAYER_DATA2'):

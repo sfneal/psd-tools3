@@ -220,6 +220,7 @@ class List(ListElement):
 
     .. py:attribute:: items
     """
+
     @classmethod
     def read(cls, fp):
         """Read the element from a file-like object.
@@ -364,6 +365,7 @@ class Double(NumericElement):
 
     .. py:attribute:: value
     """
+
     @classmethod
     def read(cls, fp):
         """Read the element from a file-like object.
@@ -499,6 +501,7 @@ class Bool(BooleanElement):
 
     .. py:attribute:: value
     """
+
     @classmethod
     def read(cls, fp):
         """Read the element from a file-like object.
@@ -522,6 +525,7 @@ class LargeInteger(IntegerElement):
 
     .. py:attribute:: value
     """
+
     @classmethod
     def read(cls, fp):
         """Read the element from a file-like object.
@@ -545,6 +549,7 @@ class Integer(IntegerElement):
 
     .. py:attribute:: value
     """
+
     @classmethod
     def read(cls, fp):
         """Read the element from a file-like object.
@@ -626,6 +631,7 @@ class RawData(BaseElement):
 
         :param fp: file-like object
         """
+
         def writer(f):
             if hasattr(self.value, 'write'):
                 return self.value.write(f)

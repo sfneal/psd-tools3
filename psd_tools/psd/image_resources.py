@@ -159,6 +159,7 @@ class ImageResources(DictElement):
 
         :param fp: file-like object
         """
+
         def writer(f):
             written = sum(self[key].write(f, encoding) for key in self)
             logger.debug('writing image resources, len=%d' % (written))
@@ -272,6 +273,7 @@ class AlphaIdentifiers(ListElement):
     """
     List of alpha identifiers.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -288,6 +290,7 @@ class AlphaNamesPascal(ListElement):
     """
     List of alpha names.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -304,6 +307,7 @@ class AlphaNamesUnicode(ListElement):
     """
     List of alpha names.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -323,6 +327,7 @@ class Byte(ByteElement):
     """
     Byte element.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(*read_fmt('B', fp))
@@ -365,6 +370,7 @@ class HalftoneScreens(ListElement):
     """
     Halftone screens.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -418,6 +424,7 @@ class Integer(IntegerElement):
     """
     Integer element.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(*read_fmt('i', fp))
@@ -431,6 +438,7 @@ class LayerGroupEnabledIDs(ListElement):
     """
     Layer group enabled ids.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -447,6 +455,7 @@ class LayerGroupInfo(ListElement):
     """
     Layer group info list.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -463,6 +472,7 @@ class LayerSelectionIDs(ListElement):
     """
     Layer selection ids.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         count = read_fmt('H', fp)[0]
@@ -481,6 +491,7 @@ class ShortInteger(ShortIntegerElement):
     """
     Short integer element.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(*read_fmt('H', fp))
@@ -495,6 +506,7 @@ class PascalString(ValueElement):
     """
     Pascal string element.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         return cls(read_pascal_string(fp, 'macroman'))
@@ -861,6 +873,7 @@ class TransferFunctions(ListElement):
     """
     Transfer functions.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         items = []
@@ -897,6 +910,7 @@ class URLList(ListElement):
     """
     URL list structure.
     """
+
     @classmethod
     def read(cls, fp, **kwargs):
         count = read_fmt('I', fp)[0]
