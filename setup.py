@@ -16,7 +16,7 @@ def get_version():
 setup(
     name='psd-tools3',
     version=get_version(),
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     author='Stephen Neal',
     author_email='stephen@stephenneal.net',
     url='https://github.com/sfneal/psd-tools3',
@@ -31,8 +31,8 @@ setup(
         'enum34;python_version<"3.4"',
     ],
     keywords="photoshop psd pil pillow",
-    package_dir={'': 'src'},
-    packages=find_packages('src'),
+    package_dir={'': 'psd_tools'},
+    packages=find_packages('psd_tools'),
     entry_points={'console_scripts': ['psd-tools=psd_tools.__main__:main']},
     classifiers=[
         'Development Status :: 4 - Beta',
