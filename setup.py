@@ -31,8 +31,8 @@ setup(
         'enum34;python_version<"3.4"',
     ],
     keywords="photoshop psd pil pillow",
-    package_dir={'': 'src'},
-    packages=find_packages('src'),
+    package_dir={'': 'psd_tools'},
+    packages=find_packages('psd_tools'),
     entry_points={'console_scripts': ['psd-tools=psd_tools.__main__:main']},
     classifiers=[
         'Development Status :: 4 - Beta',
