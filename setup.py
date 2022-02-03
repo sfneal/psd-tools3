@@ -16,7 +16,7 @@ def get_version():
 setup(
     name='psd-tools3',
     version=get_version(),
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     author='Stephen Neal',
     author_email='stephen@stephenneal.net',
     url='https://github.com/sfneal/psd-tools3',
