@@ -14,7 +14,7 @@ ipython-genutils==0.2.0
 jedi==0.18.0
 matplotlib-inline==0.1.2
 more-itertools==8.8.0
-numpy==1.22.0
+numpy==1.26.4
 packaging==20.9
 packbits==0.6
 parso==0.8.2
@@ -27,12 +27,12 @@ ptyprocess==0.7.0
 pure-eval==0.2.2
 py==1.10.0
 PyBundle==1.0.6
-Pygments==2.15.0
+Pygments==2.15.1
 -e git+https://github.com/ojii/pymaging.git@596a08fce5664e58d6e8c96847393fbe987783f2#egg=pymaging
 pyparsing==2.4.7
 pytest==6.2.4
-PyWavelets==1.1.1
-scipy==1.6.3
+PyWavelets==1.4.1
+scipy==1.11.1
 six==1.16.0
 stack-data==0.6.3
 toml==0.10.2
