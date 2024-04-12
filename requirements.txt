@@ -22,7 +22,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.3.0
 pluggy==0.13.1
-prompt-toolkit==3.0.18
+prompt-toolkit==3.0.43
 ptyprocess==0.7.0
 pure-eval==0.2.2
 py==1.10.0
