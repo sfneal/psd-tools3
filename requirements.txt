@@ -14,7 +14,7 @@ ipython-genutils==0.2.0
 jedi==0.18.0
 matplotlib-inline==0.1.2
 more-itertools==8.8.0
-numpy==1.22.0
+numpy==1.26.4
 packaging==20.9
 packbits==0.6
 parso==0.8.2
