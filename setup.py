@@ -16,7 +16,7 @@ def get_version():
 setup(
     name='psd-tools3',
     version=get_version(),
-    python_requires='>=3.8',
+    python_requires='>=3.9',
     author='Stephen Neal',
     author_email='stephen@stephenneal.net',
     url='https://github.com/sfneal/psd-tools3',
@@ -39,7 +39,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
