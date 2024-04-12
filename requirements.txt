@@ -25,7 +25,7 @@ pluggy==0.13.1
 prompt-toolkit==3.0.43
 ptyprocess==0.7.0
 pure-eval==0.2.2
-py==1.10.0
+py==1.11.0
 PyBundle==1.0.6
 Pygments==2.15.1
 -e git+https://github.com/ojii/pymaging.git@596a08fce5664e58d6e8c96847393fbe987783f2#egg=pymaging
