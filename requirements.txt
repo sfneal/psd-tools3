@@ -27,7 +27,7 @@ prompt-toolkit==3.0.43
 ptyprocess==0.7.0
 pure-eval==0.2.2
 PyBundle==1.0.6
-Pygments==2.15.1
+Pygments==2.20.0
 -e git+https://github.com/ojii/pymaging.git@596a08fce5664e58d6e8c96847393fbe987783f2#egg=pymaging
 pyparsing==2.4.7
 pytest==7.4.4
